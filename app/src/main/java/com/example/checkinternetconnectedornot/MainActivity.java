@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         checkInternet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //checkConnection();
                 final ConnectivityManager conMgr = (ConnectivityManager)getSystemService(getApplicationContext().CONNECTIVITY_SERVICE);
                 final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
 
@@ -36,24 +35,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-//    protected boolean isOnline() {
-//
-//        ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-//        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-//        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
-//
-//    public void checkConnection() {
-//        if (isOnline()) {
-//            Toast.makeText(MainActivity.this, "You are connected to Internet", Toast.LENGTH_SHORT).show();
-//        } else {
-//            Toast.makeText(MainActivity.this, "You are not connected to Internet", Toast.LENGTH_SHORT).show();
-//
-//        }
-//    }
 }
