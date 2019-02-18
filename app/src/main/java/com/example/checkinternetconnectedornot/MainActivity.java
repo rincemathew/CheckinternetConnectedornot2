@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         checkInternet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Check connection
                 final ConnectivityManager conMgr = (ConnectivityManager)getSystemService(getApplicationContext().CONNECTIVITY_SERVICE);
                 final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
 
